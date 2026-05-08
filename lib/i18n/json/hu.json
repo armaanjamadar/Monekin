@@ -499,7 +499,7 @@
       "saving": "Megtakarítási számla",
       "saving.descr": "Csak más számlákról tud pénzt hozzáadni és kivenni belőle. Tökéletes a megtakarítás megkezdéséhez.",
       "investment": "Befektetési számla",
-      "investment.descr": "Bróker-, kriptotőzsde- vagy portfóliószámla. Kövesse nyomon befektetett tőkéjét és frissítse az értékét manuálisan értékeléseken keresztül"
+      "investment.descr": "Bróker-, kriptotőzsde- vagy portfóliószámla, amely eszközöket tartalmazhat. Kövesse nyomon befektetett tőkéjét, és frissítse minden eszköz értékét manuálisan értékelésekkel"
     },
     "FORM": {
       "name": "Számla neve",

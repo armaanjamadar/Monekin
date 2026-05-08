@@ -502,7 +502,7 @@
       "saving": "Cuenta de ahorros",
       "saving.descr": "Solo podrás añadir y retirar dinero de ella desde otras cuentas. Perfecta para empezar a ahorrar",
       "investment": "Cuenta de inversión",
-      "investment.descr": "Una cuenta de broker, exchange de criptomonedas o cartera de inversión. Registra tu capital invertido y actualiza su valor manualmente mediante valoraciones"
+      "investment.descr": "Una cuenta de broker, exchange de criptomonedas o cartera de inversión que puede incluir activos. Registra tu capital invertido y actualiza el valor de cada activo manualmente mediante valoraciones"
     },
     "FORM": {
       "name": "Nombre de la cuenta",

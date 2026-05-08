@@ -499,7 +499,7 @@
       "saving": "Sparkonto",
       "saving.descr": "Du kannst nur Geld von anderen Konten einzahlen und abheben. Perfekt geignet, um Geld zu sparen",
       "investment": "Investmentkonto",
-      "investment.descr": "Ein Broker-, Krypto-Börsen- oder Portfoliokonto. Erfasse Dein investiertes Kapital und aktualisiere den Wert manuell über Bewertungen"
+      "investment.descr": "Ein Broker-, Krypto-Börsen- oder Portfoliokonto, das Vermögenswerte enthalten kann. Erfasse Dein investiertes Kapital und aktualisiere die Werte einzelner Vermögenswerte manuell über Bewertungen"
     },
     "FORM": {
       "name": "Kontoname",

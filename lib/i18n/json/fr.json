@@ -499,7 +499,7 @@
       "saving": "Compte d'épargne",
       "saving.descr": "Vous ne pourrez y ajouter et y retirer de l'argent qu'à partir d'autres comptes. Parfait pour commencer à économiser",
       "investment": "Compte d'investissement",
-      "investment.descr": "Un compte de courtier, d'échange de cryptomonnaies ou un portefeuille. Suivez votre capital investi et mettez à jour sa valeur manuellement via des évaluations"
+      "investment.descr": "Un compte de courtier, d'échange de cryptomonnaies ou un portefeuille pouvant contenir des actifs. Suivez votre capital investi et mettez à jour la valeur de chaque actif manuellement via des évaluations"
     },
     "FORM": {
       "name": "Nom du compte",

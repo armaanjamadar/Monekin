@@ -499,7 +499,7 @@
       "saving": "Tasarruf hesabı",
       "saving.descr": "Yalnızca diğer hesaplardan para ekleyebilecek ve çekebileceksiniz. Para biriktirmeye başlamak için mükemmel",
       "investment": "Yatırım hesabı",
-      "investment.descr": "Bir aracı kurum, kripto borsa veya portföy hesabı. Yatırdığınız sermayeyi takip edin ve değerini değerlemeler aracılığıyla manuel olarak güncelleyin"
+      "investment.descr": "Birden fazla varlık içerebilen bir aracı kurum, kripto borsa veya portföy hesabı. Yatırdığınız sermayeyi takip edin ve her varlığın değerini değerlemeler aracılığıyla manuel olarak güncelleyin"
     },
     "FORM": {
       "name": "Hesap adı",

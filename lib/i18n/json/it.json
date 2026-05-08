@@ -499,7 +499,7 @@
       "saving": "Conto risparmio",
       "saving.descr": "Potrai solo aggiungere e prelevare denaro da esso da altri conti. Perfetto per iniziare a risparmiare denaro",
       "investment": "Conto investimento",
-      "investment.descr": "Un conto broker, exchange di criptovalute o portafoglio. Tieni traccia del tuo capitale investito e aggiorna il suo valore manualmente tramite valutazioni"
+      "investment.descr": "Un conto broker, exchange di criptovalute o portafoglio che può contenere asset. Tieni traccia del tuo capitale investito e aggiorna il valore di ogni asset manualmente tramite valutazioni"
     },
     "FORM": {
       "name": "Nome conto",

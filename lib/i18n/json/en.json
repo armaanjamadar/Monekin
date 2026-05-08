@@ -499,7 +499,7 @@
       "saving": "Savings account",
       "saving.descr": "You will only be able to add and withdraw money from it from other accounts. Perfect to start saving money",
       "investment": "Investment account",
-      "investment.descr": "A broker, crypto exchange or portfolio account. Track your invested capital and update its value manually via valuations"
+      "investment.descr": "A broker, crypto exchange, or portfolio account that can hold assets. Track your invested capital and update each asset's value manually via valuations"
     },
     "FORM": {
       "name": "Account name",
