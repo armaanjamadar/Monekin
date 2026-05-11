@@ -11,6 +11,7 @@ ALTER TABLE assets ADD COLUMN assetType TEXT NOT NULL DEFAULT 'other';
 ALTER TABLE assets ADD COLUMN linkedAccountID TEXT REFERENCES accounts(id) ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- Step 3: Recreate `transactions` (add investment type + assetID)
+ALTER TABLE transactionTags RENAME TO transactionTags_old;
 ALTER TABLE transactions RENAME TO transactions_old;
 
 CREATE TABLE transactions (
@@ -52,6 +53,19 @@ CREATE TABLE transactions (
 INSERT INTO transactions
 SELECT id, date, accountID, value, title, notes, type, status, categoryID, debtId, receivingAccountID, valueInDestiny, isHidden, locLatitude, locLongitude, locAddress, intervalPeriod, intervalEach, endDate, remainingTransactions, NULL
 FROM transactions_old;
+
+-- Recreate `transactionTags` to reference the new `transactions` table
+CREATE TABLE transactionTags (
+  transactionID TEXT NOT NULL REFERENCES transactions(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  tagID TEXT NOT NULL REFERENCES tags(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+-- Copy old tag links back to the newly-created `transactionTags` table
+INSERT INTO transactionTags (transactionID, tagID)
+SELECT transactionID, tagID FROM transactionTags_old;
+
+-- Drop the old helper tables now that data has been migrated
+DROP TABLE transactionTags_old;
 
 DROP TABLE transactions_old;
 
