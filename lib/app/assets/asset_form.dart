@@ -285,6 +285,7 @@ class _AssetFormPageState extends State<AssetFormPage> {
                   labelText: '${t.assets.form.creation_date} *',
                 ),
                 initialDate: _creationDate,
+                lastDate: DateTime.now(),
                 dateFormat: DateFormat.yMMMd().add_jm(),
                 validator: (e) =>
                     e == null ? t.general.validations.required : null,
