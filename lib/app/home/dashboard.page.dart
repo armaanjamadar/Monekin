@@ -29,7 +29,7 @@ import 'package:monekin/core/utils/app_utils.dart';
 import 'package:monekin/i18n/generated/translations.g.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-
+import '../../core/models/date-utils/date_period.dart';
 import '../../core/models/transaction/transaction_type.enum.dart';
 import '../../core/presentation/app_colors.dart';
 
@@ -56,6 +56,7 @@ class _DashboardPageState extends State<DashboardPage> {
     });
 
     _balanceVariationStream = _getBalanceVariationStream();
+    _loadSavedDatePeriod();
   }
 
   @override
@@ -63,6 +64,22 @@ class _DashboardPageState extends State<DashboardPage> {
     _scrollController.removeListener(_setSmallHeaderVisible);
     _scrollController.dispose();
     super.dispose();
+  }
+
+  Future<void> _loadSavedDatePeriod() async {
+    final savedPeriodJson = appStateSettings[SettingKey.dashboardDatePeriod];
+
+    if (savedPeriodJson != null) {
+      try {
+        final period = DatePeriod.fromJsonString(savedPeriodJson);
+        setState(() {
+          dateRangeService = dateRangeService.copyWith(datePeriod: period);
+          _balanceVariationStream = _getBalanceVariationStream();
+        });
+      } catch (_) {
+        // Fall back to default
+      }
+    }
   }
 
   Stream<double> _getBalanceVariationStream() {
@@ -273,6 +290,11 @@ class _DashboardPageState extends State<DashboardPage> {
           DatePeriodModal(initialDatePeriod: dateRangeService.datePeriod),
         ).then((value) {
           if (value == null) return;
+
+          UserSettingService.instance.setItem(
+            SettingKey.dashboardDatePeriod,
+            value.toJsonString(),
+          );
 
           setState(() {
             dateRangeService = dateRangeService.copyWith(
